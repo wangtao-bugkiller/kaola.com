@@ -1,0 +1,214 @@
+body, button, input, select, textarea {
+    font: 12px/1.5 Helvetica Neue,Helvetica,Arial,Hiragino Sans GB,\5FAE\8F6F\96C5\9ED1,tahoma,simsun,\5b8b\4f53;
+    font-style: normal;
+    font-variant-ligatures: normal;
+    font-variant-caps: normal;
+    font-variant-numeric: normal;
+    font-variant-east-asian: normal;
+    font-weight: normal;
+    font-stretch: normal;
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", 微软雅黑, tahoma, simsun, 宋体;
+}
+#topHeadwrap{
+    width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    height: 100px;
+
+    .logo-1{
+    position: absolute;
+    left: 0;
+    top: 20px;
+    line-height: 65px;
+    outline: none;
+    cursor: pointer;
+    z-index: 9;
+    }
+    .logo-2{
+    position: absolute;
+    right: 40px;
+    }
+}
+#banner{
+    width: 1349px;
+    height: 600px;
+    background-color: #F8F8F8;
+    position: relative;
+
+    .login-body{
+        position: relative;
+        margin: 0 auto;
+        width: 1000px;
+        height: 600px;
+
+        .login-left{
+            position: absolute;
+            left: 10px;
+            margin-top: 199px;
+        }
+        .login-wrap{
+            position: absolute;
+            z-index: 2;
+            top: 110px;
+            right: 40px;
+            width: 350px;
+            font-size: 12px;
+            background-color: #fff;
+            border: 1px solid #eaeaea;
+            text-align: center;
+            .top {
+                position: relative;
+                height: 52px;
+                font-size: 16px;
+                line-height: 52px;
+                color: #333;
+                border-bottom: 1px solid #ddd;
+                background-color: #f8f8f8;
+                font-weight: bold;
+                text-align: center;
+                .active {
+                    color: #e31436;
+                }
+            }
+            .login-content {
+                padding: 0 40px;
+                min-height: 220px;
+                .login-password{
+                    box-sizing: border-box;
+                    padding: 0;
+                    margin: 0;
+                    .login-blocks{
+                        margin: 8px 0;
+                        text-align: right;
+                        zoom: 1;
+                        &>a{
+                            height: 14px;
+                            line-height: 14px;
+                            color: #666;
+                            margin-left: 0;
+                            font-size: 12px;
+                        }
+                    }
+                    .login-form{
+                        box-sizing: border-box;
+                        padding: 0;
+                        margin: 0;
+                        .fm-field{
+                            position: relative;
+                            margin-bottom: 20px;
+                            font-size: 14px;
+                            .input-pwa-wrap{
+                                margin-bottom: 16px;
+                                .fm-text{
+                                    // padding-left: 35px;
+                                    height: 36px;
+                                    line-height: 36px;
+                                    border: 1px solid #d5d5d5;
+                                    border-radius: 2px;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        .fm-field{
+                            position: relative;
+                            margin-bottom: 20px;
+                            font-size: 14px;
+                            .input-pwa-wrap{
+                                margin-bottom: 16px;
+                                .fm-text{
+                                    // padding-left: 35px;
+                                    height: 36px;
+                                    line-height: 36px;
+                                    border: 1px solid #d5d5d5;
+                                    border-radius: 2px;
+                                    width: 100%;
+                                }
+                            }
+                        }
+                        .fm-btn{
+                            box-sizing: border-box;
+                            padding: 0;
+                            margin: 0;
+                            .fm-submit{
+                                background-color: #e31436;
+                                background-image: none;
+                                border: 0;
+                                height: 36px;
+                                line-height: 36px;
+                                font-size: 14px;
+                                width: 100%;
+                                color: white;
+                            }
+                        }
+                        .login-blocks{
+                            margin: 8px 0;
+                            text-align: right;
+                            zoom: 1;
+                            .forgot-password-a-link{
+                                height: 14px;
+                                line-height: 14px;
+                                color: #666;
+                                margin-left: 0;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+            .kl-account_proto {
+                font-size: 13px;
+                color: #999;
+                margin: 0 0 10px;
+            }
+            .kl-account_proto-link {
+                color: #999;
+                text-decoration: underline;
+            }
+            .bottom{
+                padding: 10px 40px;
+                height: 42px;
+                font-size: 14px;
+                border-top: 1px solid #efefef;
+                box-sizing: border-box;
+
+                img{
+                    margin: 0 auto;
+                    width: 200px;
+                    height: 22px;
+                }
+            }
+        }
+    }
+}
+#footwrap{
+    width: 1349px;
+    height: 153px;
+    background: #fff;
+    border-top: 1px solid #eaeaea;
+
+    .about-net{
+    width: 1349px;
+    height: 113px;
+    position: relative;
+    padding: 20px 0;
+    color: #666666;
+    line-height: 26px;
+    text-align: center;
+
+    .m-license {
+        margin-left: 20px;
+    }
+    }
+    #KXYZ img{
+        margin-top: 5px;
+    border-radius: 5px;
+    width: 80px;
+    height: 30px;
+    }
+    .u-shield img{
+        height: 30px;
+    margin: 5px 0 0 10px;
+    }
+}

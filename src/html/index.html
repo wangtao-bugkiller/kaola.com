@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>考拉海购</title>
+    <link rel="stylesheet" href="../style/sass/index.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/require.js" data-main="../js/main.index"></script>
+</head>
+<body>
+    <!-- 顶部导航栏 -->
+    <div id="topNav">
+        <!-- nav标签用来定义导航链接的部分 -->
+        <nav id="topNavwarp">
+            <ul class="Nav">
+                <li>考拉欢迎你！</li>
+                <li><a>登录</a></li>
+                <li><a>免费注册</a></li>
+                <li><a>手机考拉</a></li>
+                <li><a>每日签到</a></li>
+                <li><a>我的订单</a></li>
+                <li><a>个人中心<i></i></a>
+                    <!-- 用于表示二级下拉菜单栏 -->
+                    <div class="personalCenter">
+                        <a href="">我的优惠券</a>
+                        <a href="">我的红包</a>
+                        <a href="">我的考拉豆</a>
+                        <a href="">帐号管理</a>
+                        <a href="">我的实名认证</a>
+                        <a href="">我的发票抬头</a>
+                        <a href="">我收藏的商品</a>
+                        <a href="">我关注的品牌</a>
+                        <a href="">售后管理</a>
+                    </div>
+                </li>
+                <li><a>客户服务<i></i></a>
+                    <!-- 用于表示二级下拉菜单栏 -->
+                    <div class="customerService">
+                        <a href="">联系客服</a>
+                        <a href="">帮助中心</a>
+                        <a href="">知识产权保护</a>
+                        <a href="">规则中心</a>
+                    </div>
+                </li>
+                <li><a>充值中心<i></i></a>
+                    <!-- 用于表示二级下拉菜单栏 -->
+                    <div class="payCenter">
+                        <a href="">话费充值</a>
+                        <a href="">游戏充值</a>
+                        <a href="">AppStore充值卡</a>
+                    </div>
+                </li>
+                <li><a>消费者权益<i></i></a>
+                    <!-- 用于表示二级下拉菜单栏 -->
+                    <div class="consumesInterests">
+                        <a href="">消费者告知书</a>
+                    </div>
+                </li>
+                <li><a>更多<i></i></a>
+                    <!-- 用于表示二级下拉菜单栏 -->
+                    <div class="more">
+                        <a href="">收藏本站</a>
+                        <a href="">新浪微博</a>
+                        <a href="">微信公众号</a>
+                        <a href="">招商合作</a>
+                    </div>
+                </li>
+                <li><a>视频内容</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- <aside id="r-aside">
+        <ul>
+            <li style="border-top: 1px solid #eaeaea;">
+                <a href="javascript:;">
+                    <i class="r-a-icon r-a-meiri"></i>
+                    <span>签到</span>
+                    <span class="qiandao">
+                        每日签到
+                        <br />
+                        赢考拉豆
+                        <div class="border-right">
+                            <span></span>
+                    </div>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="html/shoppcar.html">
+                    <i class="r-a-icon r-a-gouwuche"></i>
+                    <span>购物车</span>
+                    <span class="shangpingshuliang">0</span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <i class="r-a-icon r-a-app"></i>
+                    <span>APP</span>
+                    <span class="shoujiapp">
+                        <img src="../img/r-shoujiapp.png" alt="" />
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;" class="toTop">
+                    <i class="r-a-icon r-a-up"></i>
+                    <span>UP</span>
+                </a>
+            </li>
+        </ul>
+    </aside> -->
+    <!-- 主要内容 -->
+    <div class="container">
+        <!-- 搜索栏那一栏 -->
+        <div class="searchBar">
+            <a href=""><img src="../img/logo.png" alt=""></img></a>
+            <a href="" class="shopCar"><i class="shopIcon"></i> 购物车</a>
+            <div class="searchText">
+                <span class="zoomIcon"></span>
+                <input type="text" placeholder="阿迪达斯">
+                <span class="searchButton"><i></i></span>
+            </div>
+        </div>
+
+        <!-- 分类导航栏 -->
+        <div class="classificationNav">
+            <div class="allClass">
+                <span>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+                <span>所有分类</span>
+                <ul class="vertical">
+                    <li>
+                        <img class="icon"
+                            src=" https://haitao.nos.netease.com/1cet9magj32_40_40.png?imageView&thumbnail=20x20&quality=100"
+                            alt=""><span>美容彩妆</span>
+                        <div class="context">
+                            <div class="leftContext">
+                                <ul>
+                                    <li><a href="">护肤</a></li>
+                                    <li><a href="">洁面</a></li>
+                                    <li><a href="" style="color: red;">卸妆</a></li>
+                                    <li><a href="">爽肤水</a></li>
+                                    <li><a href="" style="color: red;">眼部护理</a> </li>
+                                    <li><a href="" style="color: red;">精华</a></li>
+                                    <li><a href="">乳液</a></li>
+                                    <li><a href="" style="color: red;">凝胶</a></li>
+                                    <li><a href="">手</a></li>
+                                    <li><a href="">足护理</a></li>
+                                    <li><a href="">唇部护理</a></li>
+                                    <li><a href="">乳液</a></li>
+                                    <li><a href="">凝胶</a></li>
+                                    <li><a href="">手</a></li>
+                                    <li><a href="">足护理</a></li>
+                                    <li><a href="">唇部护理</a></li>
+                                    <li><a href="">乳液</a></li>
+                                    <li><a href="">凝胶</a></li>
+                                    <li><a href="">手</a></li>
+                                    <li><a href="">足护理</a></li>
+                                    <li><a href="">唇部护理</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="">护肤</a></li>
+                                    <li><a href="" style="color: red;">洁面</a></li>
+                                    <li><a href="">卸妆</a></li>
+                                    <li><a href="" style="color: red;">爽肤水</a></li>
+                                    <li><a href="">眼部护理</a> </li>
+                                    <li><a href="">精华</a></li>
+                                    <li><a href="">乳液</a></li>
+                                    <li><a href="">凝胶</a></li>
+                                    <li><a href="">手</a></li>
+                                    <li><a href="">足护理</a></li>
+                                    <li><a href="">唇部护理</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="">护肤</a></li>
+                                    <li><a href="">洁面</a></li>
+                                    <li><a href="" style="color: red;">卸妆</a></li>
+                                    <li><a href="">爽肤水</a></li>
+                                    <li><a href="" style="color: red;">眼部护理</a> </li>
+                                    <li><a href="">精华</a></li>
+                                    <li><a href="">乳液</a></li>
+                                    <li><a href="">凝胶</a></li>
+                                    <li><a href="">手</a></li>
+                                    <li><a href="">足护理</a></li>
+                                    <li><a href="">唇部护理</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="">护肤</a></li>
+                                    <li><a href="">洁面</a></li>
+                                    <li><a href="">卸妆</a></li>
+                                    <li><a href="">爽肤水</a></li>
+                                    <li><a href="">眼部护理</a> </li>
+                                    <li><a href="">精华</a></li>
+                                    <li><a href="">乳液</a></li>
+                                    <li><a href="">凝胶</a></li>
+                                    <li><a href="">手</a></li>
+                                    <li><a href="">足护理</a></li>
+                                    <li><a href="">唇部护理</a></li>
+                                </ul>
+                            </div>
+                            <div class="rightContext">
+                                <ul>
+                                    <li><img src="../img/icc1uivj43.jpg" alt=""></li>
+                                    <li><img src="../img/idvqc2kv42.jpg" alt=""></li>
+                                    <li><img src="../img/ii7faa9k34_120_120.jpg" alt=""></li>
+                                    <li><img src="../img/icc1uivj43.jpg" alt=""></li>
+                                    <li><img src="../img/icc1uivj43.jpg" alt=""></li>
+                                    <li><img src="../img/ii7faa9k34_120_120.jpg" alt=""></li>
+                                    <img class="ad" src="../img/广告.jpg" alt="">
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li> <img class="icon"
+                            src=" https://haitao.nos.netease.com/1cet9magj32_40_40.png?imageView&thumbnail=20x20&quality=100"
+                            alt=""><span>母婴儿童</span>
+                            <div class="context">
+                                <div class="leftContext">
+                                    <ul>
+                                        <li><a href="">母婴</a></li>
+                                        <li><a href="">洁面</a></li>
+                                        <li><a href="" style="color: red;">卸妆</a></li>
+                                        <li><a href="">爽肤水</a></li>
+                                        <li><a href="" style="color: red;">眼部护理</a> </li>
+                                        <li><a href="" style="color: red;">精华</a></li>
+                                        <li><a href="">乳液</a></li>
+                                        <li><a href="" style="color: red;">凝胶</a></li>
+                                        <li><a href="">手</a></li>
+                                        <li><a href="">足护理</a></li>
+                                        <li><a href="">唇部护理</a></li>
+                                        <li><a href="">乳液</a></li>
+                                        <li><a href="">凝胶</a></li>
+                                        <li><a href="">手</a></li>
+                                        <li><a href="">足护理</a></li>
+                                        <li><a href="">唇部护理</a></li>
+                                        <li><a href="">乳液</a></li>
+                                        <li><a href="">凝胶</a></li>
+                                        <li><a href="">手</a></li>
+                                        <li><a href="">足护理</a></li>
+                                        <li><a href="">唇部护理</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="">母婴</a></li>
+                                        <li><a href="" style="color: red;">洁面</a></li>
+                                        <li><a href="">卸妆</a></li>
+                                        <li><a href="" style="color: red;">爽肤水</a></li>
+                                        <li><a href="">眼部护理</a> </li>
+                                        <li><a href="">精华</a></li>
+                                        <li><a href="">乳液</a></li>
+                                        <li><a href="">凝胶</a></li>
+                                        <li><a href="">手</a></li>
+                                        <li><a href="">足护理</a></li>
+                                        <li><a href="">唇部护理</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="">护肤</a></li>
+                                        <li><a href="">洁面</a></li>
+                                        <li><a href="" style="color: red;">卸妆</a></li>
+                                        <li><a href="">爽肤水</a></li>
+                                        <li><a href="" style="color: red;">眼部护理</a> </li>
+                                        <li><a href="">精华</a></li>
+                                        <li><a href="">乳液</a></li>
+                                        <li><a href="">凝胶</a></li>
+                                        <li><a href="">手</a></li>
+                                        <li><a href="">足护理</a></li>
+                                        <li><a href="">唇部护理</a></li>
+                                    </ul>
+                                    <ul>
+                                        <li><a href="">护肤</a></li>
+                                        <li><a href="">洁面</a></li>
+                                        <li><a href="">卸妆</a></li>
+                                        <li><a href="">爽肤水</a></li>
+                                        <li><a href="">眼部护理</a> </li>
+                                        <li><a href="">精华</a></li>
+                                        <li><a href="">乳液</a></li>
+                                        <li><a href="">凝胶</a></li>
+                                        <li><a href="">手</a></li>
+                                        <li><a href="">足护理</a></li>
+                                        <li><a href="">唇部护理</a></li>
+                                    </ul>
+                                </div>
+                                <div class="rightContext">
+                                    <ul>
+                                        <li><img src="../img/icc1uivj43.jpg" alt=""></li>
+                                        <li><img src="../img/idvqc2kv42.jpg" alt=""></li>
+                                        <li><img src="../img/ii7faa9k34_120_120.jpg" alt=""></li>
+                                        <li><img src="../img/icc1uivj43.jpg" alt=""></li>
+                                        <li><img src="../img/icc1uivj43.jpg" alt=""></li>
+                                        <li><img src="../img/ii7faa9k34_120_120.jpg" alt=""></li>
+                                        <img class="ad" src="../img/广告.jpg" alt="">
+                                    </ul>
+                                </div>
+                            </div>
+                    </li>
+                    <li> <img class="icon"
+                            src=" https://haitao.nos.netease.com/1cet9magj32_40_40.png?imageView&thumbnail=20x20&quality=100"
+                            alt=""><span>营养保障</span></li>
+                    <li> <img class="icon"
+                            src=" https://haitao.nos.netease.com/1cet9magj32_40_40.png?imageView&thumbnail=20x20&quality=100"
+                            alt=""><span>数码家电</span></li>
+                    <li> <img class="icon"
+                            src=" https://haitao.nos.netease.com/1cet9magj32_40_40.png?imageView&thumbnail=20x20&quality=100"
+                            alt=""><span>个人洗护</span></li>
+                    <li> <img class="icon"
+                            src=" https://haitao.nos.netease.com/1cet9magj32_40_40.png?imageView&thumbnail=20x20&quality=100"
+                            alt=""><span>服饰鞋靴</span></li>
+                    <li> <img class="icon"
+                            src=" https://haitao.nos.netease.com/1cet9magj32_40_40.png?imageView&thumbnail=20x20&quality=100"
+                            alt=""><span>运动户外</span></li>
+                    <li> <img class="icon"
+                            src=" https://haitao.nos.netease.com/1cet9magj32_40_40.png?imageView&thumbnail=20x20&quality=100"
+                            alt=""><span>手表配饰</span></li>
+                    <li> <img class="icon"
+                            src=" https://haitao.nos.netease.com/1cet9magj32_40_40.png?imageView&thumbnail=20x20&quality=100"
+                            alt=""><span>轻奢</span></li>
+                    <li> <img class="icon"
+                            src=" https://haitao.nos.netease.com/1cet9magj32_40_40.png?imageView&thumbnail=20x20&quality=100"
+                            alt=""><span>家居生活</span></li>
+                    <li> <img class="icon"
+                            src=" https://haitao.nos.netease.com/1cet9magj32_40_40.png?imageView&thumbnail=20x20&quality=100"
+                            alt=""><span>环球美食</span></li>
+                    <li> <img class="icon"
+                            src=" https://haitao.nos.netease.com/1cet9magj32_40_40.png?imageView&thumbnail=20x20&quality=100"
+                            alt=""><span>宠物生活</span></li>
+                </ul>
+            </div>
+            <ul class="horizontal">
+                <li><a style="color: red;">首页</a></li>
+                <li><a>海外直邮</a></li>
+                <li><a>工厂店</a></li>
+                <li><a>品质奶粉</a></li>
+                <li><a>人气面膜</a></li>
+                <li><a>充值</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main">
+        <!-- 轮播图 -->
+        <div class="RotationChart">
+            <a href="">
+                <img src="../img/1404_1920_506.jpg" alt="">
+                <img src="../img/0506.png" alt="">
+            </a>
+            <!-- 左右两边的按钮 -->
+            <span>></span> 
+            <span><</span> <!-- 底部的序列条，用于显示轮播图    当前处于整个图片序列的哪个位置 -->
+                    <!-- 总共5个序列点，用ul>li做个横向的列 表，然后设置为圆角 -->
+                    <div class="bottomList">
+                        <ul>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </div>
+        </div>
+
+        <div class="imgwrap">
+            <a href="#"><img src="../img/aimg.png"  alt=""></a>
+        </div>
+        
+        <!-- 运动系列 -->
+        <div class="sports">
+            <div class="sport-title" >
+                <h2 >
+                    <span class="big">运动户外</span>
+                </h2>
+                <ul>
+                    <li class="first">热搜词：</li>
+                    <li class="last">
+                        <a href="#" target="_blank" title="阿迪达斯" class="itm" _pi="41" style="color: rgb(254, 6, 12);">阿迪达斯</a>
+                    </li>
+                    <li class="last">
+                        <a href="#" target="_blank" title="耐克" class="itm" style="color: rgb(102, 102, 102);">耐克</a>
+                    </li>
+                    <li class="last" ><a href="#" target="_blank" title="斯凯奇" class="itm"  style="color: rgb(254, 6, 12);">斯凯奇</a>
+                    </li>
+                    <li class="last" ><a href="#" target="_blank" title="安德玛" class="itm"  style="color: rgb(254, 6, 12);">安德玛</a>
+                    </li>
+                </ul>
+                <a class="moreitem" href="#" target="_blank">更多好货<i class="iconfont" _pi="41"> ></i></a>
+            </div>
+            <div class="sport-main">
+                <div class="main-big">
+                    <a href=""><img src="../img/big542.jpg" alt=""></a>
+                </div>
+                <div class="main-small">
+                    <ul class="w-activlist">
+                        <li class="itm1">
+                            <a class="pic" href="https://mall.kaola.com/13155" target="_blank" title="斯凯奇新品上市"><h3 class="tit">斯凯奇新品上市</h3><p class="desc">热门鞋款低至5.7折</p><img class="u-loaded" src="../img/sp001.jpg" data-width="180px" data-height="144px" alt="" width="180px" height="144px" ></a>
+                        </li>
+                        <li class="itm2"><a class="pic" href="https://pages.kaola.com/pages/activity/ecff38d2ea6b463abe8c0309854bf516.shtml" target="_blank" title="自营折扣精选" _pi="2"><h3 class="tit">自营折扣精选</h3><p class="desc">阿迪耐克满199-100</p><img class="u-loaded" src="../img/sp002.jpg" data-width="180px" data-height="144px" alt="" width="180px" height="144px" ></a>
+                        </li>
+                        <li class="itm3"><a class="pic" href="https://pages.kaola.com/pages/activity/kaolaoutdoor.shtml" target="_blank" title="活力出游季"><h3 class="tit">活力出游季</h3><p class="desc">北面冲锋衣低至4折</p><img class="u-loaded" src="../img/sp003.jpg" data-width="180px" data-height="144px" alt="" width="180px" height="144px"></a>
+                        </li>
+                        <li class="itm4"><a class="pic" href="https://mall.kaola.com/25782959"  target="_blank" title="NB爆款狂欢" ><h3 class="tit">NB爆款狂欢</h3><p class="desc">全场低至3折</p><img class="" src="../img/sp004.png" data-width="180px" data-height="144px" alt="" width="180px" height="144px"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="main-hot">
+                    <h3 class="title">最新热卖</h3>
+                    <div class="hot-product">
+                        <!-- <div>
+                            <a class="pic" title="【防晒神器】Let's diet 韩国美肤光疗 防晒帽 防晒指数 UPF50+ 均码" href="#" _pi="16"><img src="../img/001.jpg"></a>
+                            <div >
+                                <h3><a class="protitle" href="#" >【防晒神器】Let's diet 韩国美肤光疗 防晒帽 防晒指数 UPF50+ 均码</a></h3>
+                                <p class="curprice" ><span class="symbol">¥</span><strong >159</strong></p>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <div class="sports-brand">
+                <div class="txt">热卖品牌</div>
+                <div class="brandListContainer" >
+                    <a class="pic" href="" target="_blank"><img class="opacity1" src="../img/300.jpg" data-width="120px" data-height="120px" alt="" width="120px" height="120px" _pi="27"></a>
+                    <a class="pic" href="" target="_blank"><img class="opacity1" src="../img/301.jpg" data-width="120px" data-height="120px" alt="" width="120px" height="120px" _pi="27"></a>
+                    <a class="pic" href="" target="_blank"><img class="opacity1" src="../img/302.jpg" data-width="120px" data-height="120px" alt="" width="120px" height="120px" _pi="27"></a>
+                    <a class="pic" href=""  target="_blank"><img class="opacity1" src="../img/303.jpg" data-width="120px" data-height="120px" alt="" width="120px" height="120px" _pi="27"></a>
+                    <a class="pic" href="" target="_blank" ><img class="opacity1" src="../img/304.jpg" data-width="120px" data-height="120px" alt="" width="120px" height="120px" _pi="27"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部官方信息 -->
+    <div class="aboutLinks">
+        <div class="provide">
+            <ul class="zdty">
+                <li><span class="cricle">正</span><span>
+                        <h2>正品承诺</h2>
+                        <p>正品保障 假一赔十</p>
+                    </span></li>
+                <li><span class="cricle">低</span><span>
+                        <h2>低价保障</h2>
+                        <p>缩减中间环节 确保低价</p>
+                    </span></li>
+                <li><span class="cricle">退</span><span>
+                        <h2>30天无忧退货</h2>
+                        <p>国内退货 售后无忧</p>
+                    </span></li>
+                <li><span class="cricle">邮</span><span>
+                        <h2>满88包邮</h2>
+                        <p>部分特殊商品除外</p>
+                    </span></li>
+            </ul>
+        </div>
+        <div class="bottomInfo">
+            <ul>
+                <li>
+                    <div class="aboutImg" src="./88330630-0c6e-4653-9f0a-92e9ae5a2f42_420_130.png" alt=""></div>
+                    <div class="aboutUs">
+                        <span class="subscribeUs">关注我们</span>
+                        <span class="weibo">
+                            <div class="tipImg1"><i></i>
+                                <div></div>
+                            </div>
+                        </span>
+                        <span class="weixin">
+                            <div class="tipImg2"><i></i>
+                                <div></div>
+                            </div>
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <dl>
+                        <dt>考拉保障</dt>
+                        <a href="#">
+                            <dd>假一赔十</dd>
+                        </a>
+                        <a href="#">
+                            <dd>廉正举报</dd>
+                        </a>
+                        <a href="#">
+                            <dd> </dd>
+                        </a>
+                        <a href="#">
+                            <dd> </dd>
+                        </a>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>新手指南</dt>
+                        <a href="#">
+                            <dd>购物流程</dd>
+                        </a>
+                        <a href="#">
+                            <dd>支付方式</dd>
+                        </a>
+                        <a href="#">
+                            <dd>通关税费</dd>
+                        </a>
+                        <a href="#">
+                            <dd>常见问题</dd>
+                        </a>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>售后服务</dt>
+                        <a href="#">
+                            <dd>售后政策</dd>
+                        </a>
+                        <a href="#">
+                            <dd>退货流程</dd>
+                        </a>
+                        <a href="#">
+                            <dd>特色服务</dd>
+                        </a>
+                        <a href="#">
+                            <dd>联系客服</dd>
+                        </a>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>物流配送</dt>
+                        <a href="#">
+                            <dd>配送方式</dd>
+                        </a>
+                        <a href="#">
+                            <dd>配送服务</dd>
+                        </a>
+                        <a href="#">
+                            <dd>运费标准</dd>
+                        </a>
+                        <a href="#">
+                            <dd>物流跟踪</dd>
+                        </a>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>商家服务</dt>
+                        <a href="#">
+                            <dd>招商合作</dd>
+                        </a>
+                        <a href="#">
+                            <dd>销售联盟</dd>
+                        </a>
+                        <a href="#">
+                            <dd>商家成长</dd>
+                        </a>
+                        <a href="#">
+                            <dd>物流跟踪</dd>
+                        </a>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dt>关于我们</dt>
+                        <a href="#">
+                            <dd>联系我们</dd>
+                        </a>
+                        <a href="#">
+                            <dd>CEO邮箱</dd>
+                        </a>
+                        <a href="#">
+                            <dd>线下店</dd>
+                        </a>
+                        <a href="#">
+                            <dd></dd>
+                        </a>
+                    </dl>
+                </li>
+                <li>
+                    <div style="position: relative;margin-left: 40px;">
+                        <img style="width: 108px;height: 108px;margin-top: 16px;;" src="../img/二维码.png"
+                            alt="">
+                        <span style="position:absolute;top: 130px;transform: translateX(12px);">扫描下载手机版</span>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <br>
+        <p>隐私政策 - 考拉海购</p>
+        <p>增值电信业务经营许可证：浙B2-20160288 自营经营者信息 （浙）网械平台备字[2018]第00007号</p>
+        <p class="gonganInfo"><img src="../img/police (1).png" alt=""><span> 浙公网安备 33010802002216号
+                阿里巴巴版权所有©2003-2020互联网药品信息服务资格证书编号（浙）-2017-0027 浙ICP备16011229号</span></p>
+        <p class="Img"> <img src="../img/police (3).png" alt=""><img
+                src="../img/police (2).png" alt=""></p>
+        <br>
+    </footer>
+</body>
+</html>

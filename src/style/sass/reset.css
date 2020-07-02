@@ -1,0 +1,24 @@
+*{margin:0;padding:0;}
+ul,li{list-style: none;}
+h1,h2,h3,h4,h5,h6{
+    font-size: 16px;
+    font-weight: normal;
+}
+a{
+    text-decoration: none;
+    color: #333333;
+}
+b,strong{
+    font-weight: normal;
+}
+i,em{
+    font-style: normal;
+}
+.fl{float: left;}
+.fr{float: right;}
+.clear:after{ content:""; display: block; clear:both;}
+
+html,body{
+    height: 100%;
+    overflow-x: hidden;
+}
