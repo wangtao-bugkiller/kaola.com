@@ -6,6 +6,7 @@ body {
   font: 12px/1.5 Helvetica Neue, Helvetica, Arial, Hiragino Sans GB, \5FAE\8F6F\96C5\9ED1, tahoma, simsun, \5b8b\4f53;
   font-weight: 500;
   overflow-x: hidden;
+  position: relative;
 }
 
 ul, li {
@@ -181,13 +182,81 @@ ul.Nav li:nth-child(11):hover .more {
   color: black;
 }
 
+#l-aside {
+  width: 99px;
+  position: absolute;
+  left: 50%;
+  top: 700px;
+  background: #fff;
+  transform: translateX(-660px);
+  z-index: 999999;
+}
+
+#l-aside .topimg {
+  display: block;
+  border-bottom: 1px solid #eaeaea;
+}
+
+#l-aside .channel {
+  padding: 0;
+  margin: 0;
+}
+
+#l-aside .channel li {
+  border: 1px solid #eaeaea;
+  border-top: 0 none;
+  border-bottom: 0 none;
+}
+
+#l-aside .channel li a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #eaeaea;
+}
+
+#l-aside .channel li a:hover {
+  color: #ff1e32;
+  background-color: #f7f7f7;
+}
+
+#l-aside .j-floor {
+  padding: 0;
+  margin: 0;
+}
+
+#l-aside .j-floor li {
+  border: 1px solid #eaeaea;
+  border-top: 0 none;
+  border-bottom: 0 none;
+}
+
+#l-aside .j-floor li a {
+  display: block;
+  height: 32px;
+  line-height: 32px;
+  padding-left: 9px;
+  font-size: 12px;
+  color: #999;
+}
+
+#l-aside .j-floor li a:hover {
+  color: #ff1e32;
+  background-color: #f6f6f6;
+}
+
 #r-aside {
   width: 60px;
   position: absolute;
   right: 50%;
   top: 700px;
   transform: translateX(620px);
-  z-index: 999;
+  z-index: 99999;
 }
 
 #r-aside ul li {
@@ -342,6 +411,109 @@ ul.Nav li:nth-child(11):hover .more {
   margin: 0 auto;
   /* 左边的logo图案，是一个超链接 */
   /* 搜索输入框部分 */
+}
+
+.container .searchBar #topsel {
+  height: 50px;
+  background: #fff;
+  width: 100%;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 22200;
+  box-sizing: border-box;
+}
+
+.container .searchBar #topsel .topsel {
+  background: #fff;
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  width: 1090px;
+  margin: 0 auto;
+}
+
+.container .searchBar #topsel .topsel .toplogin {
+  display: inline-block;
+  width: 162px;
+  height: 40px;
+  background: url(../../img/toplogin.png) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 5px;
+  left: 0;
+}
+
+.container .searchBar #topsel .topsel .toTopselect {
+  width: 510px;
+  height: 40px;
+  background: red;
+  border-radius: 40px;
+  position: absolute;
+  left: 340px;
+  top: 5px;
+  padding: 0;
+  margin: 0;
+}
+
+.container .searchBar #topsel .topsel .toTopselect .wrap {
+  float: left;
+  margin: 2px 2px;
+  padding: 6px 39px 6px 30px;
+  line-height: 0;
+  background: #fff;
+  border-radius: 24px 0 0 24px;
+}
+
+.container .searchBar #topsel .topsel .toTopselect .wrap input {
+  width: 410px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 13px;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  vertical-align: middle;
+  display: inline-block;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.container .searchBar #topsel .topsel .toTopselect .topsearchboxBackGround {
+  display: block;
+  width: 60px;
+  height: 40px;
+  border-radius: 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #ff2337;
+  background-image: linear-gradient(270deg, #ff2e64, #ff0003);
+}
+
+.container .searchBar #topsel .topsel .toTopselect .topsearchboxBackGround #topSearchBtn {
+  display: inline-block;
+  height: 40px;
+  width: 50px;
+  font-size: 19px;
+  line-height: 19px;
+  color: #FFF;
+  text-align: center;
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+  top: 0;
+  background: url(../../img/select.png) no-repeat 50%;
+}
+
+.container .searchBar #topsel .topsel .toTopselect .w-icon-26 {
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  background-position: -466px -667px;
 }
 
 .container .searchBar a {
@@ -823,12 +995,52 @@ ul.Nav li:nth-child(11):hover .more {
   zoom: 1;
 }
 
-.main .sports .sport-main .main-big {
+.main .sports .sport-main .partl {
   float: left;
   position: relative;
-  zoom: 1;
   height: 541px;
   width: 330px;
+  zoom: 1;
+}
+
+.main .sports .sport-main .partl .w-secondlist {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.main .sports .sport-main .partl .w-secondlist li {
+  float: left;
+  margin: 0 18px 8px 0;
+  width: 82px;
+  height: 42px;
+}
+
+.main .sports .sport-main .partl .w-secondlist li a {
+  display: block;
+  padding: 11px 0;
+  overflow: hidden;
+  font-size: 12px;
+  color: #333;
+  border-radius: 40px;
+  background: #fff;
+  border: 1px solid #eee;
+  width: 82px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.main .sports .sport-main .partl .w-secondlist li a .txt {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  width: 82px;
+  overflow: hidden;
+}
+
+.main .sports .sport-main .partl .w-secondlist li a .txt:hover {
+  color: #FF0000;
 }
 
 .main .sports .sport-main .main-small .w-activlist {
@@ -1001,6 +1213,234 @@ ul.Nav li:nth-child(11):hover .more {
 .main .sports .sports-brand .brandListContainer > a > img {
   vertical-align: middle;
   display: inline-block;
+}
+
+.main .m-popbrands {
+  width: 1100px;
+  margin: 0 auto !important;
+}
+
+.main .m-popbrands h2 {
+  vertical-align: middle;
+}
+
+.main .m-popbrands h2 .big {
+  font-weight: bold;
+  color: #333333;
+  font-size: 22px;
+  margin-right: 10px;
+}
+
+.main .m-popbrands h2 .change {
+  float: right;
+  font-size: 14px;
+  color: #999;
+}
+
+.main .m-popbrands h2 .change i {
+  display: inline-block;
+  width: 17px;
+  height: 14px;
+  background: url(../../img/change.png) no-repeat 0 0;
+  transition: all 0.8s linear;
+}
+
+.main .m-popbrands h2 .change:hover {
+  text-decoration: underline;
+}
+
+.main .m-popbrands h2 .change:hover i {
+  transform: rotateZ(180deg);
+}
+
+.main .m-popbrands .cnt {
+  width: 100%;
+  height: 380px;
+  margin-bottom: 50px;
+}
+
+.main .m-popbrands .cnt .fixedBrandWrap {
+  width: 220px;
+  float: left;
+  position: relative;
+}
+
+.main .m-popbrands .cnt .fixedBrandWrap .fixedBrand {
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.main .m-popbrands .cnt .fixedBrandWrap .fixedBrand .item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 219px;
+  height: 100%;
+  text-align: center;
+}
+
+.main .m-popbrands .cnt .fixedBrandWrap .fixedBrand .item a {
+  display: block;
+}
+
+.main .m-popbrands .cnt .fixedBrandWrap .fixedBrand .item a img {
+  width: 219px;
+  height: 219px;
+}
+
+.main .m-popbrands .cnt .fixedBrandWrap .fixedBrand .item a .txt {
+  position: relative;
+  height: 136px;
+  background-color: #151515;
+  color: #fff;
+  z-index: 12;
+  opacity: 0.8;
+  margin-top: -4px;
+}
+
+.main .m-popbrands .cnt .fixedBrandWrap .fixedBrand .item a .txt .name {
+  padding-top: 41px;
+  padding-bottom: 4px;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.main .m-popbrands .cnt .fixedBrandWrap .fixedBrand .item a .txt .desc {
+  font-size: 14px;
+  margin: 0 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.main .m-popbrands .cnt .fixedBrandWrap .rmtuijian {
+  display: none;
+  position: absolute;
+  top: 80px;
+  opacity: 0.8;
+  width: 28px;
+  height: 48px;
+  background: url(../../img/icon.png) no-repeat -645px -299px;
+}
+
+.main .m-popbrands .cnt .fixedBrandWrap .next {
+  right: 0;
+  background-position: -677px -299px;
+}
+
+.main .m-popbrands .cnt .recomBrand {
+  float: left;
+  margin: 0 -1px 0 220px;
+  border-top: 1px solid #e9e9e9;
+  padding: 0;
+}
+
+.main .m-popbrands .cnt .recomBrand .item {
+  position: relative;
+  float: left;
+  width: 217px;
+  height: 177px;
+  border-right: 1px solid #e9e9e9;
+  border-bottom: 1px solid #e9e9e9;
+  overflow: hidden;
+}
+
+.main .m-popbrands .cnt .recomBrand .item:hover .info .desc {
+  opacity: 0;
+}
+
+.main .m-popbrands .cnt .recomBrand .item:hover .info img {
+  top: -19px;
+  transform: translateX(-50%) scale(0.66);
+}
+
+.main .m-popbrands .cnt .recomBrand .item:hover .actions {
+  opacity: 1;
+}
+
+.main .m-popbrands .cnt .recomBrand .item .info {
+  transform: translateZ(0);
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden;
+  background: #fff;
+}
+
+.main .m-popbrands .cnt .recomBrand .item .info img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(1);
+  transition: top .3s ease, transform .3s ease;
+  display: block;
+  margin: 12px auto 0;
+  width: 120px;
+  height: 120px;
+  vertical-align: middle;
+}
+
+.main .m-popbrands .cnt .recomBrand .item .info .desc {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 700;
+  transition: opacity .2s ease .08s;
+}
+
+.main .m-popbrands .cnt .recomBrand .item .actions {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.main .m-popbrands .cnt .recomBrand .item .actions .follow {
+  display: inline-block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 54px;
+  height: 22px;
+  line-height: 20px;
+  color: #999;
+  border: 1px solid #999;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.main .m-popbrands .cnt .recomBrand .item .actions .followers {
+  margin: 99px 50px 8px;
+  color: #999;
+  font-size: 12px;
+}
+
+.main .m-popbrands .cnt .recomBrand .item .actions .enter {
+  display: block;
+  margin: 0 auto;
+  width: 80px;
+  height: 36px;
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 32px;
+  color: #ff1e3c;
+  background-color: #fff;
+  text-decoration: none;
+  border-radius: 32px;
+  border: 2px solid #ff1e3c;
+  font-size: 14px;
 }
 
 /* -------------------底部信息----------------- */

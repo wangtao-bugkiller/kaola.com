@@ -5,6 +5,7 @@ body {
     font: 12px/1.5 Helvetica Neue, Helvetica, Arial, Hiragino Sans GB, \5FAE\8F6F\96C5\9ED1, tahoma, simsun, \5b8b\4f53;
     font-weight: 500;
     overflow-x: hidden;
+    position: relative;
 }
 ul,li{list-style: none;
 }
@@ -175,14 +176,77 @@ ul.Nav li:nth-child(11):hover .more {
 }
 
 
+
+//左侧栏
+#l-aside {
+    width: 99px;
+    position: absolute;
+    left: 50%;
+    top: 700px;
+    background: #fff;
+    transform: translateX(-660px);
+    z-index: 999999;
+    .topimg {
+        display: block;
+        border-bottom: 1px solid #eaeaea;
+    }
+    .channel {
+        padding: 0;
+        margin: 0;
+        li {
+            border: 1px solid #eaeaea;
+            border-top: 0 none;
+            border-bottom: 0 none;
+            a {
+                display: block;
+                height: 50px;
+                line-height: 50px;
+                padding-left: 9px;
+                font-size: 14px;
+                font-weight: 700;
+                color: #333;
+                text-decoration: none;
+                border-bottom: 1px solid #eaeaea;
+                &:hover {
+                    color: #ff1e32;
+                    background-color: #f7f7f7;
+                }
+            }
+        }
+    }
+    .j-floor {
+        padding: 0;
+        margin: 0;
+        li {
+            border: 1px solid #eaeaea;
+            border-top: 0 none;
+            border-bottom: 0 none;
+            a {
+                display: block;
+                height: 32px;
+                line-height: 32px;
+                padding-left: 9px;
+                font-size: 12px;
+                color: #999;
+                &:hover {
+                    color: #ff1e32;
+                    background-color: #f6f6f6;
+                }
+            }
+        }
+    }
+}
+
+
 #r-aside {
     width: 60px;
     position: absolute;
     right: 50%;
     top: 700px;
     transform: translateX(620px);
-    z-index: 999;
+    z-index: 99999;
     ul {
+        
         li {
             width: 62px;
             border: 1px solid #eaeaea;
@@ -313,6 +377,103 @@ ul.Nav li:nth-child(11):hover .more {
         width: 1090px;
         height: 100px;
         margin: 0 auto;
+
+
+        //吸顶菜单
+        #topsel {
+            height: 50px;
+            background: #fff;
+            width: 100%;
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 22200;
+            box-sizing: border-box;
+            .topsel {
+                background: #fff;
+                height: 50px;
+                line-height: 50px;
+                position: relative;
+                width: 1090px;
+                margin: 0 auto;
+                .toplogin {
+                    display: inline-block;
+                    width: 162px;
+                    height: 40px;
+                    background: url(../../img/toplogin.png) no-repeat;
+                    background-size: 100% 100%;
+                    position: absolute;
+                    top: 5px;
+                    left: 0;
+                }
+                .toTopselect {
+                    width: 510px;
+                    height: 40px;
+                    background: red;
+                    border-radius: 40px;
+                    position: absolute;
+                    left: 340px;
+                    top: 5px;
+                    padding: 0;
+                    margin: 0;
+                    .wrap {
+                        float: left;
+                        margin: 2px 2px;
+                        padding: 6px 39px 6px 30px;
+                        line-height: 0;
+                        input {
+                            width: 410px;
+                            height: 24px;
+                            line-height: 24px;
+                            font-size: 13px;
+                            border: 0;
+                            padding: 0;
+                            margin: 0;
+                            vertical-align: middle;
+                            display: inline-block;
+                            outline: none;
+                            box-sizing: border-box;
+                        }
+                        background: #fff;
+                        border-radius: 24px 0 0 24px;
+                    }
+                    .topsearchboxBackGround {
+                        display: block;
+                        width: 60px;
+                        height: 40px;
+                        border-radius: 40px;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        background: #ff2337;
+                        background-image: linear-gradient(270deg, #ff2e64, #ff0003);
+                        #topSearchBtn {
+                            display: inline-block;
+                            height: 40px;
+                            width: 50px;
+                            font-size: 19px;
+                            line-height: 19px;
+                            color: #FFF;
+                            text-align: center;
+                            cursor: pointer;
+                            position: absolute;
+                            right: 5px;
+                            top: 0;
+                            background: url(../../img/select.png) no-repeat 50%;
+                        }
+                    }
+                    .w-icon-26 {
+                        width: 14px;
+                        height: 14px;
+                        position: absolute;
+                        left: 10px;
+                        top: 13px;
+                        background-position: -466px -667px;
+                    }
+                }
+            }
+        }
 
         /* 左边的logo图案，是一个超链接 */
         a {
@@ -776,13 +937,48 @@ ul.Nav li:nth-child(11):hover .more {
             height: 541px;
             border-left: 0;
             zoom: 1;
-
-            .main-big{
+            .partl {
                 float: left;
                 position: relative;
-                zoom: 1;
                 height: 541px;
                 width: 330px;
+                zoom: 1;
+                .w-secondlist {
+                    position: absolute;
+                    left: 24px;
+                    bottom: 24px;
+
+                    margin: 0;
+                    padding: 0;
+                    li {
+                        float: left;
+                        margin: 0 18px 8px 0;
+                        width: 82px;
+                        height: 42px;
+                        a {
+                            display: block;
+                            padding: 11px 0;
+                            overflow: hidden;
+                            font-size: 12px;
+                            color: #333;
+                            border-radius: 40px;
+                            background: #fff;
+                            border: 1px solid #eee;
+                            width: 82px;
+                            box-shadow: 0 0 0 1px rgba(0, 0, 0, .1);
+                            .txt {
+                                display: table-cell;
+                                text-align: center;
+                                vertical-align: middle;
+                                width: 82px;
+                                overflow: hidden;
+                                &:hover {
+                                    color: #FF0000;
+                                }
+                            }
+                        }
+                    }
+                }
             }
             .main-small{
                 .w-activlist{
@@ -937,6 +1133,209 @@ ul.Nav li:nth-child(11):hover .more {
                     &>img{
                         vertical-align: middle;
                         display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+
+    .m-popbrands {
+        width: 1100px;
+        margin: 0 auto!important;
+        h2 {
+            vertical-align: middle;
+            .big {
+                font-weight: bold;
+                color: #333333;
+                font-size: 22px;
+                margin-right: 10px;
+            }
+            .change {
+                float: right;
+                font-size: 14px;
+                color: #999;
+                i {
+                    display: inline-block;
+                    width: 17px;
+                    height: 14px;
+                    background: url(../../img/change.png) no-repeat 0 0;
+                    transition: all 0.8s linear;
+                }
+                &:hover {
+                    text-decoration: underline;
+                    i {
+                        transform: rotateZ(180deg);
+                    }
+                }
+            }
+        }
+        .cnt {
+            width: 100%;
+            height: 380px;
+            margin-bottom: 50px;
+            .fixedBrandWrap {
+                width: 220px;
+                float: left;
+                position: relative;
+                .fixedBrand {
+                    position: relative;
+                    margin: 0;
+                    padding: 0;
+                    .item {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 219px;
+                        height: 100%;
+                        text-align: center;
+                        a {
+                            display: block;
+                            img {
+                                width: 219px;
+                                height: 219px;
+                            }
+                            .txt {
+                                position: relative;
+                                height: 136px;
+                                background-color: #151515;
+                                color: #fff;
+                                z-index: 12;
+                                opacity: 0.8;
+                                margin-top: -4px;
+                                .name {
+                                    padding-top: 41px;
+                                    padding-bottom: 4px;
+                                    font-size: 20px;
+                                    font-weight: 700;
+                                    margin: 0 12px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                }
+                                .desc {
+                                    font-size: 14px;
+                                    margin: 0 12px;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
+                    }
+                }
+                .rmtuijian {
+                    display: none;
+                    position: absolute;
+                    top: 80px;
+                    opacity: 0.8;
+                    width: 28px;
+                    height: 48px;
+                    background: url(../../img/icon.png) no-repeat -645px -299px;
+                }
+                .next {
+                    right: 0;
+                    background-position: -677px -299px;
+                }
+            }
+            .recomBrand {
+                float: left;
+                margin: 0 -1px 0 220px;
+                border-top: 1px solid #e9e9e9;
+                padding: 0;
+                .item {
+                    position: relative;
+                    float: left;
+                    width: 217px;
+                    height: 177px;
+                    border-right: 1px solid #e9e9e9;
+                    border-bottom: 1px solid #e9e9e9;
+                    overflow: hidden;
+                    &:hover {
+                        .info {
+                            .desc {
+                                opacity: 0;
+                            }
+                            img {
+                                top: -19px;
+                                transform: translateX(-50%) scale(.66);
+                            }
+                        }
+                        .actions {
+                            opacity: 1;
+                        }
+                    }
+                    .info {
+                        transform: translateZ(0);
+                        margin: 0 auto;
+                        height: 100%;
+                        overflow: hidden;
+                        background: #fff;
+                        img {
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            transform: translateX(-50%) scale(1);
+                            transition: top .3s ease, transform .3s ease;
+                            display: block;
+                            margin: 12px auto 0;
+                            width: 120px;
+                            height: 120px;
+                            vertical-align: middle;
+                        }
+                        .desc {
+                            position: absolute;
+                            bottom: 20px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            text-align: center;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            font-size: 14px;
+                            font-weight: 700;
+                            transition: opacity .2s ease .08s;
+                        }
+                    }
+                    .actions {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                        transition: all 0.3s ease;
+                        .follow {
+                            display: inline-block;
+                            position: absolute;
+                            top: 10px;
+                            left: 10px;
+                            width: 54px;
+                            height: 22px;
+                            line-height: 20px;
+                            color: #999;
+                            border: 1px solid #999;
+                            text-decoration: none;
+                            border-radius: 20px;
+                        }
+                        .followers {
+                            margin: 99px 50px 8px;
+                            color: #999;
+                            font-size: 12px;
+                        }
+                        .enter {
+                            display: block;
+                            margin: 0 auto;
+                            width: 80px;
+                            height: 36px;
+                            text-align: center;
+                            box-sizing: border-box;
+                            line-height: 32px;
+                            color: #ff1e3c;
+                            background-color: #fff;
+                            text-decoration: none;
+                            border-radius: 32px;
+                            border: 2px solid #ff1e3c;
+                            font-size: 14px;
+                        }
                     }
                 }
             }

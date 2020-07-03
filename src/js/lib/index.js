@@ -3,17 +3,39 @@ let baseUrl = "http://localhost/kaola.com"; // 基础路径 必须是绝对路�
 define(['jquery'], function($) {
     return {
         render: function() {
+
+            //给边界导航条绑定事件
+            $('body,html').on('scroll',function() {
+                if($('body').scrollTop() >= 700) {
+                    $('#l-aside').css('position', 'fixed').css('top', '65px');
+                    $('#r-aside').css('position', 'fixed').css('top', '65px');
+                } else {
+                    $('#l-aside').css('position', 'absolute').css('top', '700px');
+                    $('#r-aside').css('position', 'absolute').css('top', '700px');
+                }
+
+                if($('body').scrollTop() >= 140) {
+                    $('#topsel').css('display', 'block')
+                } else if($(window).scrollTop() < 140) {
+                    $('#topsel').css('display', 'none')
+                }
+            });
+            $('.toTop').on('click', function() {
+                $('body').scrollTop(0);
+            });
+
+            //数据渲染
             $.ajax({
                 type: "get",
                 url: `${baseUrl}/interface/getall.php`,
                 dataType: "json",
                 success: function(res) {
-                    console.log(res);
+                    // console.log(res);
                     let temp = '';
                     res.forEach(elm => {
-                        console.log(elm.pic);
+                        // console.log(elm.pic);
                         let pic = JSON.parse(elm.pic);
-                        console.log(pic);
+                        // console.log(pic);
                         temp += `<div>
                         <a class="pic" title="${elm.title}" href="${baseUrl}/src/html/ddetail.html?id=${elm.id}"><img src="${baseUrl}/src/${pic[0].src}" alt="${baseUrl}/src/${pic[0].title}"></a>
                         <div >
@@ -126,22 +148,6 @@ for (let i = 0; i < bottomListLi.length; i++) {
     }
 }
 
-$(function() {
-	$(window).on('scroll', function() {
-		if($(window).scrollTop() >= 140) {
-			$('#r-aside').css('display', 'block')
-		} else if($(window).scrollTop() < 140) {
-			$('#r-aside').css('display', 'none')
-		}
-		if($(window).scrollTop() >= 700) {
-			$('#l-aside').css('position', 'fixed').css('top', '65px');
-			$('#r-aside').css('position', 'fixed').css('top', '65px');
-		} else {
-			$('#l-aside').css('position', 'absolute').css('top', '700px');
-			$('#r-aside').css('position', 'absolute').css('top', '700px');
-		}
-	});
-	$('.toTop').on('click', function() {
-		$(window).scrollTop(0);
-    });
-})
+
+	
+
