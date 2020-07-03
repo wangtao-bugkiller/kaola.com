@@ -50,6 +50,10 @@ a {
     margin-left:12px;
     margin-right: 12px;
     cursor: pointer;
+    a{
+        color:#999;
+        
+    }
 
     /* 这个地方是将i标签用css画成三角形，做倒三角字符 */
     i {
@@ -67,7 +71,7 @@ a {
     }
     }
 
-    li:hover {
+    li:hover >a{
         color: #fff;
     }
 
@@ -501,7 +505,10 @@ ul.Nav li:nth-child(11):hover .more {
             border-radius: 36px;
             font-size: 0.8rem;
             font-weight: 500;
-            text-align: center;
+            text-align: center;            
+            color:#999;
+                
+            
 
             /* 购物车icon图标 */
             .shopIcon {
@@ -1280,7 +1287,7 @@ ul.Nav li:nth-child(11):hover .more {
                             margin: 12px auto 0;
                             width: 120px;
                             height: 120px;
-                            vertical-align: middle;
+                            // vertical-align: middle;
                         }
                         .desc {
                             position: absolute;

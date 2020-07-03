@@ -62,6 +62,10 @@ a {
   /* 这个地方是将i标签用css画成三角形，做倒三角字符 */
 }
 
+#topNav #topNavwarp .Nav li a {
+  color: #999;
+}
+
 #topNav #topNavwarp .Nav li i {
   position: relative;
   top: 10px;
@@ -76,7 +80,7 @@ a {
   transition: all 0.2s ease;
 }
 
-#topNav #topNavwarp .Nav li:hover {
+#topNav #topNavwarp .Nav li:hover > a {
   color: #fff;
 }
 

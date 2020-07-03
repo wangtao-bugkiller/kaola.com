@@ -22,6 +22,12 @@ html,body{
 a {
     text-decoration: none;
 }
+// a:link{
+//     text-decoration: none;
+// }
+// a:visited{
+//     text-decoration: none;
+// }
 /* ---------------顶部导航栏部分---------------------*/
 /* 设置外层包裹标签，方便实现导航条居中 */
 #topNav {
@@ -49,7 +55,10 @@ a {
     margin-left:12px;
     margin-right: 12px;
     cursor: pointer;
-
+        a{
+            color:#999;
+            
+        }
     /* 这个地方是将i标签用css画成三角形，做倒三角字符 */
     i {
         position: relative;
@@ -66,7 +75,7 @@ a {
     }
     }
 
-    li:hover {
+    li:hover > a{
         color: #fff;
     }
 

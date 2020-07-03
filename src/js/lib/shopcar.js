@@ -3,7 +3,8 @@ let baseUrl = "http://localhost/kaola.com";
 define(['jquery', 'cookie'], function($, cookie) {
     return {
         render: function() {
-            let shop = cookie.get('shop'); //   获取cookie数据
+            let shop = cookie.get('shop');
+             //   获取cookie数据
 
             if (shop) {
                 shop = JSON.parse(shop);
@@ -45,7 +46,7 @@ define(['jquery', 'cookie'], function($, cookie) {
                                     </p>
                                 </div>
                                 <div class="skudesc"  >
-                                    <p title="颜色" class="skuline"  >颜色：粉色</p>
+                                    <p title="颜色" class="skuline"  >颜色：${elm.color}</p>
                                 </div>
                             </div>
                             <div class="col col3"  >
@@ -61,9 +62,10 @@ define(['jquery', 'cookie'], function($, cookie) {
                                 <span class="sum sumrow"  >￥${(arr[0].num*elm.price).toFixed(2)}</span>
                             </div>
                             <div class="col col6"  >
-                                <a class="u-opt" id="shop-del" >删除</a>
+                                <a class="u-opt shop-del">删除</a>
                                 <span class="u-opt"  >移入我的收藏</span>
                             </div>
+                            <div id="del-id" style="display:none">${elm.id}</div>
                         </li>`
                             ;
 
@@ -73,11 +75,15 @@ define(['jquery', 'cookie'], function($, cookie) {
                         $('.num').html(`￥${numT.toFixed(2)}`);
                         $('.itm1').html(`￥${numT.toFixed(2)}`);
                         $('.num1').html(`${numitem}`);
-                        $('#shop-del').on('click',function(){
-                            let i=$("this:parent");
-                            console.log(i);
-                            //cookie.set('shop', JSON.stringify(res), 1);
-                            // cookie.remove('{"id":"${elm.id}","price":"${elm.price}","num":"${arr[0].num}"}');
+                        $('.shop-del').on('click',function(){
+                            let d = ($("#del-id").text());
+                            shop1=shop.filter(val => val.id!=d);
+                            cookie.set('shop',JSON.stringify(shop1),1);
+                            location.reload();
+                        });
+                        $('.gobuy').on('click',function(){
+                            cookie.set('shop',' ',-1);
+                            alert('您的订单已提交');
                             location.reload();
                         });
                     }

@@ -63,6 +63,10 @@ a {
   /* 这个地方是将i标签用css画成三角形，做倒三角字符 */
 }
 
+#topNav #topNavwarp .Nav li a {
+  color: #999;
+}
+
 #topNav #topNavwarp .Nav li i {
   position: relative;
   top: 10px;
@@ -77,7 +81,7 @@ a {
   transition: all 0.2s ease;
 }
 
-#topNav #topNavwarp .Nav li:hover {
+#topNav #topNavwarp .Nav li:hover > a {
   color: #fff;
 }
 
@@ -542,6 +546,7 @@ ul.Nav li:nth-child(11):hover .more {
   font-size: 0.8rem;
   font-weight: 500;
   text-align: center;
+  color: #999;
   /* 购物车icon图标 */
 }
 
@@ -1381,7 +1386,6 @@ ul.Nav li:nth-child(11):hover .more {
   margin: 12px auto 0;
   width: 120px;
   height: 120px;
-  vertical-align: middle;
 }
 
 .main .m-popbrands .cnt .recomBrand .item .info .desc {
