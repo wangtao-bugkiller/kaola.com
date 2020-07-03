@@ -89,6 +89,9 @@ define(['jquery', 'cookie'], function($, cookie) {
                     }
                 });
             }
+            $('.check-all').on('click',function(){
+                $('input[type=checkbox]').prop('checked',$(this).prop('checked'))
+        })
         }
     }
 });

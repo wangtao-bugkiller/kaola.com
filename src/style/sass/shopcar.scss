@@ -160,7 +160,7 @@ ul.Nav li:nth-child(8):hover,
 ul.Nav li:nth-child(9):hover,
 ul.Nav li:nth-child(10):hover,
 ul.Nav li:nth-child(11):hover {
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0)!important;
     background-color: rgb(253, 253, 253);
 }
 
@@ -170,7 +170,7 @@ ul.Nav li:nth-child(8) a:hover,
 ul.Nav li:nth-child(9) a:hover,
 ul.Nav li:nth-child(10) a:hover,
 ul.Nav li:nth-child(11) a:hover {
-    color: rgb(240, 15, 15);
+    color: rgb(240, 15, 15)!important;
 }
 
 /* 类名.Nav中的第7到第11的li元素是拥有下拉二级菜单栏，鼠标经过时显示相应的二级下拉菜单栏 */
@@ -180,7 +180,7 @@ ul.Nav li:nth-child(9):hover .payCenter,
 ul.Nav li:nth-child(10):hover .consumesInterests,
 ul.Nav li:nth-child(11):hover .more {
     display: block;
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0)!important;
 }
 /* ---------------搜索框那一栏---------------------*/
 .container {
