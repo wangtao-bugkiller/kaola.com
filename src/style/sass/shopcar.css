@@ -485,18 +485,35 @@ ul.Nav li:nth-child(11):hover .more {
   vertical-align: top;
   position: relative;
   width: 170px;
+  padding-top: 28px;
 }
 
 .main-wrap .cartbox .m-cart .goods .m-goods .gooditm .col4 .num {
+  float: left;
   width: 43px;
   height: 20px;
   line-height: 20px;
   text-align: center;
   border: 1px solid #bcbcbc;
   border-width: 1px 0;
-  position: absolute;
-  top: 30px;
-  left: 80px;
+}
+
+.main-wrap .cartbox .m-cart .goods .m-goods .gooditm .col4 .minus {
+  margin-left: 47px;
+}
+
+.main-wrap .cartbox .m-cart .goods .m-goods .gooditm .col4 .algorithm {
+  display: inline-block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid #bcbcbc;
+  color: #333;
+  font-family: iconfont;
 }
 
 .main-wrap .cartbox .m-cart .goods .m-goods .gooditm .col5 {
